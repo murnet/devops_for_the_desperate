@@ -12,6 +12,6 @@ telnet-server/main
 *.tool-versions
 
 temp
-idea
+.idea
 venv
 .venv
