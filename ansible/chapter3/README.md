@@ -1,5 +1,7 @@
 # Chapter 3
 
+($xo!_[1R0GI^Dc_\Vn?=V
+
 I created the Google authenticator file using the following command.
 
 ```bash
