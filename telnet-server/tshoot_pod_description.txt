@@ -1,0 +1,63 @@
+Name:             telnet-server-7c9999c457-mjw9p
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.59.102
+Start Time:       Sat, 15 Mar 2025 09:46:25 +0700
+Labels:           app=telnet-server
+                  pod-template-hash=7c9999c457
+                  skaffold.dev/run-id=209cf22c-739f-44fc-9dce-bcc7ce828761
+Annotations:      prometheus.io/port: 9000
+                  prometheus.io/scrape: true
+Status:           Pending
+IP:               10.244.0.7
+IPs:
+  IP:           10.244.0.7
+Controlled By:  ReplicaSet/telnet-server-7c9999c457
+Containers:
+  telnet-server:
+    Container ID:   
+    Image:          dftd/telnet-server:b8a90cd5b7c5ca41cf61085a7c2e18d7ceddc8aa2cbff20233d21619d3eb7985
+    Image ID:       
+    Ports:          2323/TCP, 9000/TCP
+    Host Ports:     0/TCP, 0/TCP
+    State:          Waiting
+      Reason:       ImagePullBackOff
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  100M
+    Requests:
+      cpu:        100m
+      memory:     1M
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-jgrd6 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-jgrd6:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                     From               Message
+  ----     ------     ----                    ----               -------
+  Normal   Scheduled  8m22s                   default-scheduler  Successfully assigned default/telnet-server-7c9999c457-mjw9p to minikube
+  Normal   Pulling    5m5s (x5 over 8m21s)    kubelet            Pulling image "dftd/telnet-server:b8a90cd5b7c5ca41cf61085a7c2e18d7ceddc8aa2cbff20233d21619d3eb7985"
+  Warning  Failed     5m2s (x5 over 8m18s)    kubelet            Failed to pull image "dftd/telnet-server:b8a90cd5b7c5ca41cf61085a7c2e18d7ceddc8aa2cbff20233d21619d3eb7985": Error response from daemon: pull access denied for dftd/telnet-server, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+  Warning  Failed     5m2s (x5 over 8m18s)    kubelet            Error: ErrImagePull
+  Warning  Failed     3m10s (x20 over 8m17s)  kubelet            Error: ImagePullBackOff
+  Normal   BackOff    2m55s (x21 over 8m17s)  kubelet            Back-off pulling image "dftd/telnet-server:b8a90cd5b7c5ca41cf61085a7c2e18d7ceddc8aa2cbff20233d21619d3eb7985"
