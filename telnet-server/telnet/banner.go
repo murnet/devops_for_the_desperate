@@ -23,5 +23,5 @@ ____________ ___________
 | |/ /| |     | | | |/ /
 |___/ \_|     \_/ |___/
 `
-	return fmt.Sprintf("%s%s%s", colorCyan, b, colorReset)
+	return fmt.Sprintf("%s%s%s", colorGreen, b, colorReset)
 }
